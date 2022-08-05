@@ -4,7 +4,7 @@
 
 Poner un nombre de usuario en una variable de entorno. 
 
-`USER_NAME=andcastillo`
+`USER_NAME=sebastian`
 
 ## Crear la imagen de docker con el esquema y los datos pre-guardados
 
