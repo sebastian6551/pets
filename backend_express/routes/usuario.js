@@ -15,7 +15,7 @@ router.get('/', function (req, res, next) {
     }
 
     //use the client for executing the query
-    client.query('SELECT * FROM usuario;', function (err, result) {
+    client.query('SELECT * FROM pet;', function (err, result) {
       //call `done(err)` to release the client back to the pool (or destroy it if there is an error)
       done(err);
 
@@ -29,7 +29,7 @@ router.get('/', function (req, res, next) {
 })
 
 /**
- * Buscar un usuario dado su id_usuario
+ * Buscar una mascota dado su id
  */
 router.get('/:id', function (req, res, next) {
   connect(function (err, client, done) {
@@ -38,7 +38,7 @@ router.get('/:id', function (req, res, next) {
     }
 
     //use the client for executing the query
-    client.query(`SELECT * FROM usuario WHERE id_usuario=${req.params.id};`, function (err, result) {
+    client.query(`SELECT * FROM pet WHERE pid=${req.params.id};`, function (err, result) {
       //call `done(err)` to release the client back to the pool (or destroy it if there is an error)
       done(err);
 
@@ -62,7 +62,7 @@ router.post('/', function (req, res, next) {
     }
 
     //use the client for executing the query
-    client.query(`INSERT INTO  usuario(nombre_usuario, password) VALUES ('${req.body.nombre_usuario}', '${req.body.password}');`, function (err, result) {
+    client.query(`INSERT INTO  pet(pet_name, age, type_id) VALUES ('${req.body.pet_name}', ${req.body.age}, ${req.body.type_id});`, function (err, result) {
       //call `done(err)` to release the client back to the pool (or destroy it if there is an error)
       done(err);
       if (err) {
