@@ -1,8 +1,51 @@
 body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background: #0f111a;
 }
 
-a {
-  color: #00B7FF;
+/* Titulos */
+h1 {
+  font-family: 'Josefin Sans', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 64px;
+  color: #FFFFFF;
+  user-select: none;
+}
+
+.campo {
+  /* Rectangle 5 */
+  box-sizing: border-box;
+  width: 293px;
+  height: 49px;
+  background: #ed1c24;
+  border: 1px solid #ed1c24;
+  border-radius: 10px;
+  font-family: 'Jost', sans-serif;
+  padding: 20px;
+  font-style: normal;
+  font-size: 15px;
+  color: #D1D1D1;
+}
+
+/* Color del texto que contiene el campo*/
+.campo::placeholder {
+  color: #D1D1D1;
+}
+
+.boton_buscar {
+  box-sizing: border-box;
+  width: 293px;
+  height: 49px;
+  background: #5961ff;
+  border: 1px solid #5961ff;
+  border-radius: 10px;
+  cursor: pointer;
+
+  /* Texto adentro del botón */
+  font-family: 'Josefin Sans', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 15px;
+  text-align: center;
+  color: #FFFFFF;
 }
